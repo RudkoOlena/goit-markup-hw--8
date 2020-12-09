@@ -4,6 +4,10 @@ header>.container.header-nav {
     align-items: center;
 }
 
+header>.container {
+    padding-bottom: 0;
+}
+
 
 // .title {
 //     @include fonts(700, 36px, 1.17, 0.03em);

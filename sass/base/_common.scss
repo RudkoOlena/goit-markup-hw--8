@@ -1,12 +1,14 @@
 html {
     box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after {
     box-sizing: inherit;
+    outline: 1px solid darkblue;
 }
-h1,h2,h3,ul {
+h1,h2,h3,ul,p {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -42,6 +44,7 @@ a {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 60px;
+    padding: 60px 15px;
     margin-left: auto;
     margin-right: auto; 
     background-color: chocolate; 
@@ -52,11 +55,13 @@ a {
     
     @media screen and (min-width:768px) {
         width: 768px;
+        padding-top: 94px;
+        padding-bottom: 94px;
     }
     
     @media screen and (min-width:1200px) {
         width: 1200px;
-        padding-top: 94px;
+        // padding-top: 94px;
     }
 
 }
