@@ -5,59 +5,54 @@
 
 .overlay {
     max-width: 1600px;
-    // height: 600px;
     height: 400px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(
-    to right,
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)
-    ),
-    url(../../images/hero/hero_mobile1x.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    
-    @media screen and (min-width: 480px) {
-        .overlay {
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+        ),
+        url(../../images/hero/hero_mobile1x.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        
+        @media screen and (min-width: 480px) {
             background-image: url(../../images/hero/hero_mobile1x.jpg);
-        }
-        @media screen and (min-resolution: 2dppx) {
-            .overlay {
+            
+            @media screen and (min-resolution: 2dppx) {
                 background-image: url(../../images/hero/hero_mobile2x.jpg);
             }
         }
-    }
-
-    @media screen and (min-width: 768px) {
-        .overlay {
+            
+        @media screen and (min-width: 768px) {
             background-image: url(../../images/hero/hero_tablet1x.jpg);
-        }
-        @media screen and (min-resolution: 2dppx) {
-            .overlay {
+            
+            @media screen and (min-resolution: 2dppx) {
                 background-image: url(../../images/hero/hero_tablet2x.jpg);
             }
         }
-    }
-
-    @media screen and (min-width: 1200px) {
-        .overlay {
+        
+        @media screen and (min-width: 1200px) {
             background-image: url(../../images/hero/hero_desktop1x.jpg);
-        }
-        @media screen and (min-resolution: 2dppx) {
-            .overlay {
+            height: 600px;
+               
+            @media screen and (min-resolution: 2dppx) {
                 background-image: url(../../images/hero/hero_desktop2x.jpg);
             }
         }
-    }
 }
-
+        
 .main-title {
-    // @include fonts(900, 44px, 1.62, 0.06em);
     @include fonts(900, 26px, 1.62, 0.06em);
     text-align: center;
     text-transform: uppercase;  
     color: $main-title-text-color;
     padding-top: 118px;
     padding-bottom: 30px;
+    
+    @media screen and (min-width: 1200px) {
+        @include fonts(900, 44px, 1.62, 0.06em); 
+        padding-top: 200px;
+    }
 }

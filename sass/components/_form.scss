@@ -131,7 +131,12 @@
 }
 
 footer .field-button {
-    margin-left: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    // margin-left: 12px;
 }
 
 
@@ -171,7 +176,9 @@ footer .field-button {
     margin-right: 8px;  
 }
 
-
+.field-button-send {
+   margin-left: 10px;
+}
 
 
 

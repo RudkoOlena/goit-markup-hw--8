@@ -64,7 +64,6 @@ a {
   padding: 60px 15px;
   margin-left: auto;
   margin-right: auto;
-  background-color: chocolate;
 }
 
 @media screen and (min-width: 480px) {
@@ -76,30 +75,19 @@ a {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    padding-top: 94px;
-    padding-bottom: 94px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
 .current {
   color: #2196F3;
-}
-
-.advantages-icon::before {
-  content: '';
-  display: block;
-  height: 120px;
-  background: #F5F4FA;
-  background-size: 70px;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-bottom: 30px;
 }
 
 .button {
@@ -410,7 +398,10 @@ a {
 }
 
 footer .field-button {
-  margin-left: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .modal-svg {
@@ -448,6 +439,10 @@ footer .field-button {
   margin-right: 8px;
 }
 
+.field-button-send {
+  margin-left: 10px;
+}
+
 header > .container.header-nav {
   display: flex;
   padding-top: 0px;
@@ -480,37 +475,38 @@ header > .container {
 }
 
 @media screen and (min-width: 480px) {
-  .overlay .overlay {
+  .overlay {
     background-image: url(../../images/hero/hero_mobile1x.jpg);
   }
 }
 
 @media screen and (min-width: 480px) and (min-resolution: 2dppx) {
-  .overlay .overlay {
+  .overlay {
     background-image: url(../../images/hero/hero_mobile2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) {
-  .overlay .overlay {
+  .overlay {
     background-image: url(../../images/hero/hero_tablet1x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .overlay .overlay {
+  .overlay {
     background-image: url(../../images/hero/hero_tablet2x.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .overlay .overlay {
+  .overlay {
     background-image: url(../../images/hero/hero_desktop1x.jpg);
+    height: 600px;
   }
 }
 
 @media screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .overlay .overlay {
+  .overlay {
     background-image: url(../../images/hero/hero_desktop2x.jpg);
   }
 }
@@ -527,26 +523,34 @@ header > .container {
   padding-bottom: 30px;
 }
 
+@media screen and (min-width: 1200px) {
+  .main-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+    padding-top: 200px;
+  }
+}
+
 footer {
   background: #2F303A;
 }
 
 footer .container {
-  display: flex;
+  display: block;
+  text-align: center;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 .footer-logo {
-  margin-top: 6px;
-}
-
-.join {
-  margin-left: 70px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .join > h3 {
-  margin-top: 12px;
+  margin-top: 60px;
   display: inline-block;
   font-weight: 700;
   font-size: 14px;
@@ -603,14 +607,27 @@ footer .social-icons-svg {
 
 .advantages-list {
   display: block;
+  margin: -15px;
 }
 
-.advantages-list > li {
-  width: 450px;
+@media screen and (min-width: 768px) {
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
-.advantages .container {
-  padding-bottom: 0;
+@media screen and (min-width: 1200px) {
+  .advantages-list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .advantages .container {
+    padding-bottom: 0;
+  }
 }
 
 .advantages-title {
@@ -622,11 +639,34 @@ footer .social-icons-svg {
   text-transform: uppercase;
   color: #212121;
   text-align: center;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
-.advantages-icon:not(:last-child) {
-  margin-bottom: 30px;
+.advantages-icon {
+  margin: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages-icon {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages-icon {
+    flex-basis: calc((100% - 120px) / 4);
+  }
+}
+
+.advantages-icon::before {
+  content: '';
+  display: block;
+  height: 120px;
+  background: #F5F4FA;
+  background-size: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .antenna::before {
@@ -691,10 +731,14 @@ footer .social-icons-svg {
   padding-bottom: 25px;
 }
 
-@media screen and (min-width: 1200px) {
-  .services-title {
-    display: block;
-  }
+.services-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #212121;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
 }
 
 .projects-title {
@@ -813,18 +857,40 @@ footer .social-icons-svg {
 
 .team-list {
   display: block;
-  height: 622px;
-  width: 450px;
+  margin: -15px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .team-member {
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  margin: 15px;
 }
 
-.team-member:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .team-member {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-member {
+    flex-basis: calc((100% - 120px) / 4);
+  }
 }
 
 .name {
@@ -850,13 +916,35 @@ footer .social-icons-svg {
 
 .clients-list {
   display: flex;
-  justify-content: space-between;
-  padding-bottom: 94px;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.clients-item {
+  margin: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .clients-item {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients-item {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-item {
+    flex-basis: calc((100% - 180px) / 6);
+  }
 }
 
 .clients-item-link {
   height: 90px;
-  width: 170px;
+  width: 100%;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   display: flex;
@@ -877,5 +965,15 @@ footer .social-icons-svg {
 .clients-icons-svg {
   fill: #AFB1B8;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.title-clients {
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=main.css.map */

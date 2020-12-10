@@ -1,15 +1,34 @@
 .clients-list {
     display: flex;
-    justify-content: space-between;
-    padding-bottom: 94px;
+    flex-wrap: wrap;
+    margin: -15px;
 }
+
+.clients-item {
+    margin: 15px;
+
+    @media screen and (min-width: 480px) {
+        flex-basis: calc((100% - 60px) / 2 );
+    }
+    
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 90px) / 3 );
+    }
+    
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 180px) / 6 );
+    }
+}
+
 
 .clients-item-link {
     height: 90px;
-    width: 170px;
+    width: 100%;
     border: 1px solid $border-color;
     border-radius: 4px;
     @include flex();
+    
+    
     
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -27,6 +46,13 @@
 .clients-icons-svg {
      fill: $border-color;
      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ .title-clients {
+    text-align: center;
+     @include fonts(700, 28px, 1.17, 0.03em)
+     color: $secondary-text-color;
+     margin-bottom: 30px;
  }
 
  
