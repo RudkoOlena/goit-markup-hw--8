@@ -20,10 +20,13 @@
 
 
 .advantages .container {
-    @media screen and (max-width: 768px - 1px) {
-        padding-bottom: 0;
-        
+    @media screen and (max-width: 767px) {
+       padding-bottom: 0;
     }
+
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 0;
+     }
 }
 
 .advantages-title {

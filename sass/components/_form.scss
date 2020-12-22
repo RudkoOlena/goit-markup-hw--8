@@ -178,7 +178,17 @@ footer .field-button {
 
 .field-button-send {
    margin-left: 10px;
+   fill: $main-title-text-color;
 }
+
+.field-button:focus {
+    color: $secondary-text-color;
+    background-color: $filter-button-color;
+}
+
+.field-button:focus .field-button-send {
+    fill: $secondary-text-color;
+ } 
 
 
 
